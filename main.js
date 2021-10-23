@@ -46,6 +46,7 @@ class UI {
     let id = parent.querySelector(".delete").dataset.id;
 
     this.updateCompletedTasks(id);
+    this.addTask();
   }
   // Update Completed Tasks
   updateCompletedTasks(id) {
