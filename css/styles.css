@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+button,
+input {
+  outline: none;
+  border: none;
+}
+
+form {
+  width: 70%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #cccccc;
+  padding: 20px;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+form > input {
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+}
+
+form .input {
+  flex-basis: 70%;
+  border: 1px solid #9e9e9e;
+}
+
+form .add {
+  flex-basis: 25%;
+  background-color: #2196f3;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  cursor: pointer;
+}
+
+.tasks {
+  width: 70%;
+  min-height: 50px;
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #cccccc;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.tasks .task {
+  padding: 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.tasks .task:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* .tasks .task.done {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+} */
+
+.tasks .task p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.tasks .task > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks .task .delete {
+  padding: 5px 10px;
+  margin-left: 10px;
+  font-size: 1rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+}
+
+.tasks .task .fa-check {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+}
+
+.tasks .task.done .delete {
+  pointer-events: auto;
+}
+
+.tasks .task .delete:hover {
+  opacity: .85;
+}
+
+.tasks .task.done p,
+.tasks .task.done .fa-check {
+  opacity: .5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  form, 
+  .tasks {
+    width: 90%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form .input {
+    margin-bottom: 1rem;
+  }
+}
